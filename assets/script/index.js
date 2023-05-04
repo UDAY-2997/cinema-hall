@@ -1,5 +1,6 @@
 "use strict";
 
+console.log("hello");
 print("hello");
 
 import { select, print } from "./utils.js";
@@ -22,14 +23,14 @@ async function getMovies() {
       throw new Error(`${response.statusText} ${response.status}`);
 
     const data = await response.json();
-    const grid = select(".grid-box");
+    const grid = select(".grid-container");
     console.log(grid);
 
     function get(array) {
       grid.innerHTML = "";
 
       array.forEach((element) => {
-        grid.innerHTML += ` <div class="data">
+        grid.innerHTML += ` <div class="grid-item">
                <div class="poster">
                  <img
                    src="${element.img}"
@@ -40,7 +41,7 @@ async function getMovies() {
        `;
       });
     }
-    get(data.movies);
+    get(data.results);
   } catch (error) {
     print(error.message);
   }

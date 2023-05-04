@@ -113,31 +113,37 @@ input[type="text"] {
   cursor: pointer;
 }
 
-
-.grid-box {
+.grid-container {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px 20px; /* add some space between the boxes */
 }
 
-.data{
+.grid-item {
   text-align: center;
   height: 330px;
 }
 
-.data img {
+.grid-item img {
   border-radius: 15px;
 }
 
-.data p {
+.grid-item p {
   color: #fff;
   margin-top: 5px;
   font-size: 18px;
 }
 
-.data:hover {
+.grid-item:hover {
   animation: pop 0.5s linear 1;
 }
+
+@keyframes pop {
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 
 /* MAIN ENDS */

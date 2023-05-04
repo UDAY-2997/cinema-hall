@@ -22,14 +22,14 @@ async function getMovies() {
       throw new Error(`${response.statusText} ${response.status}`);
 
     const data = await response.json();
-    const grid = select(".grid-container");
+    const grid = select(".grid-box");
     console.log(grid);
 
     function get(array) {
       grid.innerHTML = "";
 
       array.forEach((element) => {
-        grid.innerHTML += ` <div class="grid-item">
+        grid.innerHTML += ` <div class="data">
                <div class="poster">
                  <img
                    src="${element.img}"

@@ -1,0 +1,116 @@
+@import url(./reset.css);
+
+/* CONTAINER */
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+/* HEADER */
+
+header {
+  background-color: #1f2229;
+}
+
+ .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.head-1 h1, img {
+  font-size: 25px;
+  color: #0d5c7f;
+  font-weight: 600;
+  line-height: 49px;
+  letter-spacing: 0.6px;
+}
+
+.ticket-img {
+  width: 30px;
+  height: 30px;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+}
+
+nav ul li a {
+  flex: 1;
+  display: block;
+  padding: 13px 16px;
+  text-align: center;
+  color: #f0f1ff;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+nav ul li a:hover,
+a:focus,
+a:active {
+  background-color: #0d5c7f;
+}
+
+.icon-1 {
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.icon-1 img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+
+/* HEADER ENDS */
+
+/* MAIN */
+
+#movie-list {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  border: 1px solid #0d5c7f;
+  border-radius: 5px;
+  padding: 10px 0px 10px 50px;
+  font-size: 14px;
+  width: 650px;
+  font-weight: 40;
+  color: #000;
+  background-size: 15px;
+  background: transparent;
+  transition: border-color 0.25 ease-in-out;
+  display: inline;
+}
+
+.search {
+  background:  url(../media/images/search.png) no-repeat 15px
+    42%;
+}
+
+
+
+.location input[type="text"] {
+  width: 200px;
+   background: url(../media/images/marker.png) no-repeat 15px
+    42%;
+}
+
+.btn-1 {
+  padding: 10px 35px;
+  background-color: #0d5c7f;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* MAIN ENDS */

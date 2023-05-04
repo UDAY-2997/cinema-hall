@@ -84,10 +84,10 @@ input[type="text"] {
   font-size: 14px;
   width: 650px;
   font-weight: 40;
-  color: #000;
+  color: #f0f1ff;
   background-size: 15px;
   background: transparent;
-  transition: border-color 0.25 ease-in-out;
+  transition: all 0.5s ease-in-out;
   display: inline;
 }
 

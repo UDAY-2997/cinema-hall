@@ -75,6 +75,7 @@ a:active {
 
 #movie-list {
   margin-top: 20px;
+  align-items: flex-start;
 }
 
 input[type="text"] {
@@ -96,7 +97,22 @@ input[type="text"] {
     42%;
 }
 
-
+ul {
+  list-style: none;
+}
+.list {
+  width: 100%;
+  background-color: #1f2229;
+  border-radius: 0 0 5px 5px;
+}
+.list-items {
+  border: 1px solid #f0f1ff;
+  padding: 10px 5px;
+}
+.list-items:hover {
+  color: #0d5c7f;
+  background-color: #14161d;
+}
 
 .location input[type="text"] {
   width: 200px;
@@ -117,7 +133,7 @@ input[type="text"] {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 30px 20px; /* add some space between the boxes */
+  grid-gap: 60px 20px;
 }
 
 .grid-item {
@@ -126,17 +142,17 @@ input[type="text"] {
 }
 
 .grid-item img {
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .grid-item p {
   color: #fff;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .grid-item:hover {
-  animation: pop 0.5s linear 1;
+  animation: pop 0.60s linear 0.4;
 }
 
 @keyframes pop {

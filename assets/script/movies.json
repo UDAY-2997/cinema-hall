@@ -3,92 +3,76 @@
     {
       "title": "Jurassic Park",
       "year": 1993,
-   
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/jurassic-park.jpg"
     },
     {
       "title": "Eternals",
       "year": 2021,
-
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/eternals.jpg"
     },
     {
       "title": "The Matrix",
       "year": 1999,
- 
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-matrix.jpg"
     },
     {
       "title": "JFK",
       "year": 1991,
- 
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/jfk.jpg"
     },
     {
       "title": "The Lord of the Rings: The Fellowship of the Ring",
       "year": 2001,
-    
- 
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-fellowship-of-the-ring.jpg"
     },
     {
       "title": "No Time to Die",
       "year": 2021,
-  
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/no-time-to-die.jpg"
     },
     {
       "title": "The Batman",
       "year": 2022,
-
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-batman.jpg"
     },
     {
       "title": "Rocky",
       "year": 1976,
-  
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/rocky.jpg"
     },
     {
       "title": "The Exorcist",
       "year": 1973,
-   
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-exorcist.jpg"
     },
     {
       "title": "West Side Story",
       "year": 2021,
-  
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/west-side-story.jpg"
     },
     {
       "title": "The Lion King",
       "year": 1994,
-
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-lion-king.jpg"
     },
     {
       "title": "Gone in 60 Seconds",
       "year": 2000,
-   
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/gone-in-60-seconds.jpg"
     },
     {
       "title": "Titanic",
       "year": 1999,
-
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/titanic.jpg"
     },
     {
       "title": "The Godfather",
       "year": 1973,
-      
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-godfather.jpg"
     },
     {
       "title": "The Remains of the Day",
       "year": 1993,
-     
       "img": "https://raw.githubusercontent.com/mrspecht/media/main/img/the-remains-of-the-day.jpg"
     }
   ]

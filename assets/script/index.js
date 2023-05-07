@@ -1,6 +1,6 @@
 "use strict";
 
-import { select, print, onEvent } from "./utils.js";
+import { select, print } from "./utils.js";
 
 const moviesInput = select(".search-movie");
 const cityInput = select(".search-city");
@@ -20,6 +20,24 @@ const options = {
   },
   mode: "cors",
 };
+
+function onItemClick(e) {
+  e.preventDefault();
+  const click = e.target;
+  this.value = click.innerHTML;
+  this.nextElementSibling.innerHTML = "";
+}
+
+function onEvent(element, event, callback) {
+  if (element === null) {
+    console.warn(`onEvent: element ${element} is null`);
+    return;
+  }
+  element.addEventListener(event, callback);
+}
+
+onEvent(listMovies, "click", onItemClick.bind(moviesInput));
+onEvent(listCities, "click", onItemClick.bind(cityInput));
 
 async function fetchJson(url) {
   try {
@@ -53,38 +71,29 @@ async function getMovies() {
   getInfo(data.results);
 
   function autoInputs(array, input, list) {
-    onEvent(input, "keyup", function () {
-      let inputValue = input.value.toLowerCase();
-      removeDropdown(input, list);
-      if (inputValue.length === 0) return;
+  onEvent(input, "keyup", function () {
+    let inputValue = input.value.toLowerCase();
+    removeDropdown(input, list);
+    if (inputValue.length === 0) return;
 
-      const matchingTitles = array.filter((el) => el.title.toLowerCase().startsWith(inputValue)).map((el) => el.title);
-      const rawTitles = matchingTitles.map((title) => `<li>${title}</li>`).join('');
-
-      list.innerHTML = rawTitles;
-    });
-  }
+    const matchingTitles = array.filter((el) => el.title.toLowerCase().startsWith(inputValue)).map((el) => el.title);
+    if (matchingTitles.length === 0) {
+      list.innerHTML = "<li>No movies found</li>";
+      return;
+    }
+    const rawTitles = matchingTitles.map((title) => `<li>${title}</li>`).join('');
+    list.innerHTML = rawTitles;
+  });
+}
   autoInputs(data.results, moviesInput, listMovies);
 }
 
 getMovies();
 
-function removeDropdown(input, list) {
-  if (input.value.length === 0) list.innerHTML = "";
-}
-
-function onItemClick(e) {
-  e.preventDefault();
-  const click = e.target;
-  this.value = click.innerHTML;
-  this.nextElementSibling.innerHTML = "";
-}
-
-onEvent(listMovies, "click", onItemClick.bind(moviesInput));
-onEvent(listCities, "click", onItemClick.bind(cityInput));
 
 async function getCities() {
   const data = await fetchJson(citiesData);
+  
   function autoInput(array, input, list) {
     onEvent(input, "keyup", function () {
       let inputValue = input.value.toLowerCase();
@@ -92,7 +101,10 @@ async function getCities() {
 
       const matchingNames = array.filter((el) => el.name.toLowerCase().startsWith(inputValue)).map((el) => el.name);
       // const matchingAbbr = array.filter((el) => el.abbreviation.toLowerCase().startsWith(inputValue)).map((el) => el.abbreviation);
-
+      if (matchingNames.length === 0) {
+      list.innerHTML = "<li>No cities found</li>";
+      return;
+    }
       const rawNames = matchingNames.map((name) => `<li>${name}</li>`).join('');
       // const rawAbbr = matchingAbbr.map((abbreviation) => `<li>${abbreviation}</li>`).join('');
 
@@ -104,3 +116,11 @@ async function getCities() {
 }
 
 getCities();
+
+function removeDropdown(input, list) {
+  if (list !== null) {
+    list.innerHTML = "";
+  }
+}
+
+
